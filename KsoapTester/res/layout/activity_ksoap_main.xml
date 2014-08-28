@@ -1,0 +1,196 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".KsoapMainActivity" >
+
+    <Button
+        android:id="@+id/noCompressionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="No Compression" />
+    
+    <Button
+        android:id="@+id/gzipCompressionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/noCompressionButton"
+        android:layout_alignBottom="@+id/noCompressionButton"
+        android:layout_toRightOf="@+id/noCompressionButton"
+        android:text="GZIP Compression" />
+
+    <Button
+        android:id="@+id/exiCompressionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/gzipCompressionButton"
+        android:layout_alignBottom="@+id/gzipCompressionButton"
+        android:layout_toRightOf="@+id/gzipCompressionButton"
+        android:text="EXI Compression" />
+
+    <Button
+        android:id="@+id/startScriptButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/stopHelloButton"
+        android:layout_alignTop="@+id/exiCompressionButton"
+        android:layout_toRightOf="@+id/exiCompressionButton"
+        android:text="Start Script" />
+
+    <Button
+        android:id="@+id/stopScriptButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/startScriptButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/startScriptButton"
+        android:layout_toRightOf="@+id/startScriptButton"
+        android:text="Stop Script" />
+
+    <Button
+        android:id="@+id/httpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/noCompressionButton"
+        android:layout_alignRight="@+id/noCompressionButton"
+        android:layout_below="@+id/noCompressionButton"
+        android:text="Use HTTP" />
+
+    <Button
+        android:id="@+id/udpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/httpButton"
+        android:layout_alignBottom="@+id/httpButton"
+        android:layout_alignLeft="@+id/gzipCompressionButton"
+        android:layout_alignRight="@+id/gzipCompressionButton"
+        android:text="Use UDP" />
+
+    <Button
+        android:id="@+id/mqButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/udpButton"
+        android:layout_alignBottom="@+id/udpButton"
+        android:layout_alignLeft="@+id/exiCompressionButton"
+        android:layout_alignRight="@+id/exiCompressionButton"
+        android:text="Use MQ" />
+
+    <Button
+        android:id="@+id/startRawButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/httpButton"
+        android:layout_alignRight="@+id/httpButton"
+        android:layout_below="@+id/httpButton"
+        android:text="Start Raw Test" />
+
+    <Button
+        android:id="@+id/startPictureButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/udpButton"
+        android:layout_alignRight="@+id/udpButton"
+        android:layout_below="@+id/udpButton"
+        android:text="Start Picture Test" />
+
+    <Button
+        android:id="@+id/startHelloButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/startPictureButton"
+        android:layout_alignBottom="@+id/startPictureButton"
+        android:layout_alignLeft="@+id/mqButton"
+        android:layout_alignRight="@+id/mqButton"
+        android:text="Start Hello Test" />
+
+    <Button
+        android:id="@+id/stopRawButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/startRawButton"
+        android:layout_alignRight="@+id/startRawButton"
+        android:layout_below="@+id/startRawButton"
+        android:text="Stop Raw Test" />
+
+    <Button
+        android:id="@+id/stopPictureButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/startPictureButton"
+        android:layout_below="@+id/startRawButton"
+        android:layout_toRightOf="@+id/startRawButton"
+        android:text="Stop Picture Test" />
+
+    <Button
+        android:id="@+id/stopHelloButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startPictureButton"
+        android:layout_toLeftOf="@+id/startScriptButton"
+        android:layout_toRightOf="@+id/startPictureButton"
+        android:text="Stop Hello Test" />
+
+    <Button
+        android:id="@+id/privateIPButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/stopRawButton"
+        android:layout_alignRight="@+id/stopRawButton"
+        android:layout_below="@+id/stopRawButton"
+        android:text="192.168.0.102" />
+
+    <Button
+        android:id="@+id/publicIPButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/privateIPButton"
+        android:layout_alignBottom="@+id/privateIPButton"
+        android:layout_alignLeft="@+id/stopPictureButton"
+        android:layout_alignRight="@+id/stopPictureButton"
+        android:text="84.202.118.69" />
+
+    <EditText
+        android:id="@+id/roundsField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/stopHelloButton"
+        android:layout_alignTop="@+id/stopHelloButton"
+        android:layout_toLeftOf="@+id/stopScriptButton"
+        android:layout_toRightOf="@+id/stopHelloButton"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="20" />
+
+    <TextView
+        android:id="@+id/roundsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/roundsField"
+        android:layout_alignLeft="@+id/stopScriptButton"
+        android:layout_alignRight="@+id/stopScriptButton"
+        android:layout_alignTop="@+id/stopHelloButton"
+        android:editable="false"
+        android:gravity="center"
+        android:text="Rounds"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/privateIPButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/roundsText"
+        android:layout_below="@+id/privateIPButton"
+        android:text="Status" />
+
+
+</RelativeLayout>
